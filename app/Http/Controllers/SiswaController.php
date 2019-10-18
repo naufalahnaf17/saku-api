@@ -97,8 +97,8 @@ class SiswaController extends Controller
     public function delete($nim)
     {
 
-      $data = Siswa::find($nim);
-      if($data->delete()){
+      $data = DB::table('dev_siswa')->where('nim', $nim)->delete();
+      if($data){
         $res['status'] = "200";
         $res['message'] = "Success!";
         return response($res);
