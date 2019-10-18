@@ -24,7 +24,6 @@ Route::post('/forgot-password/{username}' , 'UserController@forgotPassword');
 
 // Api Siswa
 Route::get('/siswa' , 'SiswaController@index');
-Route::get('/siswa/{keyword}' , 'SiswaController@search');
 Route::post('/siswa/tambah' , 'SiswaController@tambah');
 Route::put('/siswa/{nim}' , 'SiswaController@edit');
 Route::delete('/siswa/{nim}' , 'SiswaController@delete');
